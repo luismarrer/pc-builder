@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC Builder</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- JS -->
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <main>
+        <h1>Elige los componentes del PC de tus sueños</h1>
+        <!-- Componentes disponibles -->
+        <section id="componentes-section">
+            <h2>⚙️ Componentes disponibles</h2>
+            <section>
+                <h3>CPU</h3>
+                <article class="componente" draggable="true" data-nombre="Intel Core i9" data-precio="550" data-imagen="img/CPU.jpg">
+                    <img src="img/CPU.jpg" alt="CPU Intel Core i9">
+                    <p>Intel Core i9</p>
+                    <p>$550</p>
+                    <button>Añadir al carrito</button>
+                </article>
+                <article class="componente" draggable="true" data-nombre="AMD Ryzen 7" data-precio="450" data-imagen="img/CPU.jpg">
+                    <img src="img/CPU.jpg" alt="CPU AMD Ryzen 7">
+                    <p>AMD Ryzen 7</p>
+                    <p>$450</p>
+                    <button>Añadir al carrito</button>
+                </article>
+            </section>
+            <section>
+                <h3>GPU</h3>
+                <article class="componente" draggable="true" data-nombre="Nvidia RTX 4080" data-precio="1200" data-imagen="img/gpu.jpg">
+                    <img src="img/gpu.jpg" alt="GPU Nvidia RTX 4080">
+                    <p>Nvidia RTX 4080</p>
+                    <p>$1200</p>
+                    <button>Añadir al carrito</button>
+                </article>
+                <article class="componente" draggable="true" data-nombre="AMD Radeon RX 7900" data-precio="1000" data-imagen="img/gpu.jpg">
+                    <img src="img/gpu.jpg" alt="GPU AMD Radeon RX 7900">
+                    <p>AMD Radeon RX 7900</p>
+                    <p>$1000</p>
+                    <button>Añadir al carrito</button>
+                </article>
+            </section>
+            <section>
+                <h3>Placa Base</h3>
+                <article class="componente" draggable="true" data-nombre="ASUS ROG" data-precio="350" data-imagen="img/motherboard.jpg">
+                    <img src="img/motherboard.jpg" alt="Placa Base ASUS ROG">
+                    <p>ASUS ROG</p>
+                    <p>$350</p>
+                    <button>Añadir al carrito</button>
+                </article>
+                <article class="componente" draggable="true" data-nombre="Gigabyte Aorus" data-precio="320" data-imagen="img/motherboard.jpg">
+                    <img src="img/motherboard.jpg" alt="Placa Base Gigabyte Aorus">
+                    <p>Gigabyte Aorus</p>
+                    <p>$320</p>
+                    <button>Añadir al carrito</button>
+                </article>
+            </section>
+            <section>
+                <h3>Fuente de Alimentación</h3>
+                <article class="componente" draggable="true" data-nombre="Corsair 850W" data-precio="150" data-imagen="img/psu.jpg">
+                    <img src="img/psu.jpg" alt="Fuente de Alimentación Corsair 850W">
+                    <p>Corsair 850W</p>
+                    <p>$150</p>
+                    <button>Añadir al carrito</button>
+                </article>
+                <article class="componente" draggable="true" data-nombre="EVGA 750W" data-precio="130" data-imagen="img/psu.jpg">
+                    <img src="img/psu.jpg" alt="Fuente de Alimentación EVGA 750W">
+                    <p>EVGA 750W</p>
+                    <p>$130</p>
+                    <button>Añadir al carrito</button>
+                </article>
+            </section>
+            <section>
+                <h3>Memoria RAM</h3>
+                <article class="componente" draggable="true" data-nombre="Corsair Vengeance 32GB" data-precio="120" data-imagen="img/ram.jpg">
+                    <img src="img/ram.jpg" alt="RAM Corsair Vengeance 32GB">
+                    <p>Corsair Vengeance 32GB</p>
+                    <p>$120</p>
+                    <button>Añadir al carrito</button>
+                </article>
+                <article class="componente" draggable="true" data-nombre="G.Skill Trident Z 32GB" data-precio="130" data-imagen="img/ram.jpg">
+                    <img src="img/ram.jpg" alt="RAM G.Skill Trident Z 32GB">
+                    <p>G.Skill Trident Z 32GB</p>
+                    <p>$130</p>
+                    <button>Añadir al carrito</button>
+                </article>
+            </section>
+            <section>
+                <h3>Almacenamiento SSD</h3>
+                <article class="componente" draggable="true" data-nombre="Samsung 980 Pro 1TB" data-precio="150" data-imagen="img/ssd.jpg">
+                    <img src="img/ssd.jpg" alt="SSD Samsung 980 Pro 1TB">
+                    <p>Samsung 980 Pro 1TB</p>
+                    <p>$150</p>
+                    <button>Añadir al carrito</button>
+                </article>
+                <article class="componente" draggable="true" data-nombre="Crucial P5 Plus 1TB" data-precio="140" data-imagen="img/ssd.jpg">
+                    <img src="img/ssd.jpg" alt="SSD Crucial P5 Plus 1TB">
+                    <p>Crucial P5 Plus 1TB</p>
+                    <p>$140</p>
+                    <button>Añadir al carrito</button>
+                </article>
+            </section>
+        </section>
+        <aside>
+            <!-- Ubicación del usuario -->
+            <section id="ubicacion-section">
+                <h2>📍 Tu ubicación</h2>
+                <div id="ubicacion-container">
+                    <p id="ubicacion-texto">Obteniendo ubicación...</p>
+                    <button id="btn-obtener-ubicacion">Actualizar ubicación</button>
+                </div>
+            </section>
+            <!-- Carrito de la compra -->
+            <section id="carrito-section">
+                <h2>🛒 Carrito de la compra</h2>
+                <div id="carrito-container" class="carrito-drop-zone">
+                    <p class="carrito-vacio">Arrastra aquí</p>
+                    <div id="carrito-items"></div>
+                </div>
+            </section>
+            <!-- Total -->
+            <section id="total-section">
+                <h2>Total</h2>
+                <div id="total-container">
+                    <p id="total-precio">$0</p>
+                    <button id="btn-comprar" disabled>Finalizar Compra</button>
+                </div>
+            </section>
+        </aside>
+    </main>
+</body>
+</html>
